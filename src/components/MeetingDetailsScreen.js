@@ -21,7 +21,7 @@ export function MeetingDetailsScreen({
   const [meetingIdError, setMeetingIdError] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const [iscreateMeetingClicked, setIscreateMeetingClicked] = useState(false);
-  const [isJoinMeetingClicked, setIsJoinMeetingClicked] = useState(false);
+  const [isJoinMeetingClicked, setIsJoinMeetingClicked] = useState(true);
 
   const selectType = [
     { label: "Meeting", value: meetingTypes.MEETING },
@@ -198,7 +198,7 @@ export function MeetingDetailsScreen({
               </> */}
             ) : (
               <>
-                <button
+                {/* <button
                   className="w-full bg-purple-350 text-white px-2 py-3 rounded-xl"
                   onClick={async (e) => {
                     const meetingId = await _handleOnCreateMeeting();
@@ -210,7 +210,7 @@ export function MeetingDetailsScreen({
                   }}
                 >
                   Create a meeting
-                </button>
+                </button> */}
                 <button
                   className="w-full bg-gray-650 text-white px-2 py-3 rounded-xl mt-5"
                   onClick={(e) => {

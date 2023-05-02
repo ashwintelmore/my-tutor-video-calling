@@ -608,7 +608,7 @@ export function BottomBar({
       <LeaveBTN />
       <MicBTN />
       <WebCamBTN />
-      <RecordingBTN />
+      {/* <RecordingBTN /> */}
       <OutlinedButton Icon={DotsHorizontalIcon} onClick={handleClickFAB} />
       <Transition appear show={Boolean(open)} as={Fragment}>
         <Dialog
@@ -651,27 +651,33 @@ export function BottomBar({
                               : "col-span-4 sm:col-span-3 md:col-span-2"
                               }`}
                           >
-                            {icon === BottomBarButtonTypes.RAISE_HAND ? (
-                              <RaiseHandBTN isMobile={isMobile} isTab={isTab} />
-                            ) : icon === BottomBarButtonTypes.SCREEN_SHARE ? (
-                              <ScreenShareBTN
-                                isMobile={isMobile}
-                                isTab={isTab}
-                              />
-                            ) : icon === BottomBarButtonTypes.CHAT ? (
-                              <ChatBTN isMobile={isMobile} isTab={isTab} />
-                            ) : icon === BottomBarButtonTypes.PARTICIPANTS ? (
-                              <ParticipantsBTN
-                                isMobile={isMobile}
-                                isTab={isTab}
-                              />
-                            ) : icon ===
-                              BottomBarButtonTypes.MEETING_ID_COPY ? (
-                              <MeetingIdCopyBTN
-                                isMobile={isMobile}
-                                isTab={isTab}
-                              />
-                            ) : null}
+                            {
+                              //  icon === BottomBarButtonTypes.RAISE_HAND ? 
+                              //  (
+                              //   <RaiseHandBTN isMobile={isMobile} isTab={isTab} />
+                              //  ) :
+                              icon === BottomBarButtonTypes.SCREEN_SHARE ? (
+                                <ScreenShareBTN
+                                  isMobile={isMobile}
+                                  isTab={isTab}
+                                />
+                              )
+                                // : icon === BottomBarButtonTypes.CHAT ? 
+                                // (
+                                //   <ChatBTN isMobile={isMobile} isTab={isTab} />
+                                // ) 
+                                : icon === BottomBarButtonTypes.PARTICIPANTS ? (
+                                  <ParticipantsBTN
+                                    isMobile={isMobile}
+                                    isTab={isTab}
+                                  />
+                                ) : icon ===
+                                  BottomBarButtonTypes.MEETING_ID_COPY ? (
+                                  <MeetingIdCopyBTN
+                                    isMobile={isMobile}
+                                    isTab={isTab}
+                                  />
+                                ) : null}
                           </div>
                         );
                       })}
