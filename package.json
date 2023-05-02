@@ -1,5 +1,5 @@
 {
-  "name": "MyTutor Viding calling",
+  "name": "mytutor-video-calling",
   "version": "0.1.0",
   "dependencies": {
     "@headlessui/react": "^1.4.1",
